@@ -1,0 +1,44 @@
+/**
+ * Main CSS File
+ *
+ * Tailwind CSS v4 - Using new @import syntax
+ * Docs: https://tailwindcss.com/docs/installation/using-vite
+ */
+
+@import "tailwindcss";
+
+/* Tell Tailwind where to scan for classes */
+@source "./**/*.{js,jsx,ts,tsx}";
+@source "../index.html";
+
+/**
+ * Custom Global Styles
+ *
+ * Add your custom global styles here if needed
+ * Prefer using Tailwind utilities in components
+ */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Custom scrollbar styles */
+/* Uncomment if you want custom scrollbar
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+*/
