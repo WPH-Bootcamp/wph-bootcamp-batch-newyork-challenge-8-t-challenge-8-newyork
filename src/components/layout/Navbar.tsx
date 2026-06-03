@@ -5,6 +5,7 @@ import Button from '../ui/Button';
 import { menuItems } from '@/data/navigations';
 import { useTheme } from '@/context/ThemeContext';
 import Hamburger from '@/assets/hamburger-menu.png';
+import HamburgerBl from '@/assets/hamburger-bl.png';
 import X from '@/assets/x-close.png';
 
 const THEME_BTN_BASE =
@@ -49,10 +50,10 @@ const Navbar: React.FC = () => {
   return (
     <nav
       aria-label='Navigasi Utama'
-      className={`sticky md:fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={`sticky md:fixed top-0 inset-x-0 z-50 transition-all bg-base-white duration-300 ${
         isScrolled
           ? SCROLLED_MENU_CLASS
-          : `${NOT_SCROLLED_MENU_CLASS} text-base-white bg-transparent dark:bg-base-black`
+          : `${NOT_SCROLLED_MENU_CLASS} text-base-white dark:bg-base-black`
       }`}
     >
       <div className='w-full max-w-5xl z-10 mx-auto flex justify-between items-center h-16 px-4'>
@@ -134,7 +135,7 @@ const Navbar: React.FC = () => {
             aria-label='Toggle menu'
           >
             <img
-              src={isOpen ? X : Hamburger}
+              src={isOpen ? X : theme == 'light' ? Hamburger : HamburgerBl}
               alt={isOpen ? 'Close menu' : 'Open menu'}
               className='w-6 h-6 object-contain dark:invert transition-all select-none'
             />
