@@ -289,9 +289,9 @@ Berdasarkan design Figma, buat sections berikut (sesuaikan dengan design yang di
 **Format Submission:**
 
 ```
-Nama: [Nama lengkap kamu]
-Repository: [GitHub repository URL]
-Deployment: [Live website URL]
+Nama: [William Suryadinata]
+Repository: [https://github.com/WilliamSuryadinata/Challenge-8-WilliamSuryadinata-CompanyProfile.git]
+Deployment: [challenge-8-william-suryadinata-com-lovat.vercel.app]
 Notes: [Catatan tambahan jika ada - challenges, learning points, etc.]
 ```
 
