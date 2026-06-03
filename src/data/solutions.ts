@@ -2,7 +2,7 @@ import type { SolutionItem } from '../types';
 
 // Import semua ikon dari folder assets/icon
 import webDevIcon from '../assets/icon/Web Development.png';
-import mobileAppIcon from '../assets/icon/mobile App Development.png';
+import mobileAppIcon from '../assets/icon/Mobile App Development.png';
 import uiUxIcon from '../assets/icon/UI-UX Design.png';
 import cloudIcon from '../assets/icon/Cloud Solutions.png';
 import softwareDevIcon from '../assets/icon/Software Development.png';
