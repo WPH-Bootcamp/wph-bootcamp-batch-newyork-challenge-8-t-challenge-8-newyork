@@ -1,30 +1,34 @@
-/**
- * Main App Component
- *
- * TODO untuk mentee:
- * 1. Import Home page component (setelah dibuat)
- * 2. Render Home component di sini
- * 3. Atau setup routing jika membuat multiple pages
- *
- * Current: Placeholder untuk testing Tailwind setup
- */
+import { Navbar } from './components/layout/Navbar';
+import { Hero } from './components/sections/Hero';
+import { LogoCloud } from './components/sections/LogoCloud';
+import { Statistics } from './components/sections/Statistics';
+import { OurProcess } from './components/sections/OurProcess';
+import { Solution } from './components/sections/Solution';
+import { Industry } from './components/sections/Industry';
+import { Projects } from './components/sections/Projects';
+import { Testimonials } from './components/sections/Testimonials';
+import { FAQ } from './components/sections/FAQ';
+import { Contact } from './components/sections/Contact';
+import { Footer } from './components/layout/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Company Profile Assignment
-        </h1>
-        <p className="text-lg text-gray-600 mb-6">
-          Start building your components!
-        </p>
-        <div className="space-y-2 text-sm text-gray-500">
-          <p>TailwindCSS configured</p>
-          <p>Folder structure ready</p>
-          <p>Check README.md for instructions</p>
-        </div>
-      </div>
+    <div className='min-h-screen bg-gray-50'>
+      <Navbar />
+
+      <main>
+        <Hero /> 
+        <LogoCloud /> 
+        <Statistics /> 
+        <OurProcess /> 
+        <Solution /> 
+        <Industry /> 
+        <Projects /> 
+        <Testimonials />
+        <FAQ />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }

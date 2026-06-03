@@ -1,0 +1,7 @@
+font-family: Font family/font-family-display;
+font-weight: 700;
+font-style: Bold;
+font-size: Font size/display-3xl;
+leading-trim: NONE;
+line-height: Line height/display-3xl;
+letter-spacing: -2%;

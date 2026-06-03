@@ -21,6 +21,13 @@
  */
 export type ButtonVariant = 'primary' | 'secondary' | 'outline';
 
+export interface ButtonProps {
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary';
+  onClick?: () => void;
+  className?: string;
+}
+
 /**
  * Example: Button Props
  * Uncomment dan sesuaikan dengan kebutuhan

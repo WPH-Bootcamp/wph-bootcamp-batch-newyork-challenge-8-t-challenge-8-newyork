@@ -7,38 +7,71 @@
 
 @import "tailwindcss";
 
-/* Tell Tailwind where to scan for classes */
-@source "./**/*.{js,jsx,ts,tsx}";
-@source "../index.html";
-
-/**
- * Custom Global Styles
- *
- * Add your custom global styles here if needed
- * Prefer using Tailwind utilities in components
- */
-
-/* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
 }
 
-/* Optional: Custom scrollbar styles */
-/* Uncomment if you want custom scrollbar
-::-webkit-scrollbar {
-  width: 10px;
+/* Animasi berjalan dari Kiri ke Kanan */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 70s linear infinite;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
+.mask-gradient-edges {
+  mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+@variant dark (&:where(.dark, .dark *));
+
+/* BARIS KEDUA DAN SETERUSNYA: BARU BOLEH CONFIG & TEMA */
+@theme {
+  --font-sans: 'Quicksand', sans-serif;
+  --color-brand-primary: #FF623E;
+  
+  /* Token warna dinamis */
+  --color-bg-main: var(--bg-main);
+  --color-text-main: var(--text-main);
+  --color-bg-navbar: var(--bg-navbar);
+  --color-text-muted: var(--text-muted);
+  --color-bg-card: var(--bg-card);
+  --bg-border-card: var(--border-card);
 }
-*/
+
+/* 1. KONDISI DEFAULT (LIGHT MODE) */
+:root {
+  --bg-main: #FFFFFF;
+  --text-main: #OAOD12;
+  --bg-navbar: transparent;
+  --text-muted: #717680;
+  --bg-card: #f8f9fa;
+  --border-card: #DEDCDC;
+}
+
+/* 2. KONDISI SAAT AKTIF (.DARK MODE) */
+.dark {
+  --bg-main: #000000;
+  --text-main: #ffffff;
+  --bg-navbar: transparent;
+  --text-muted: #9ca3af;
+  --bg-card: #0A0D12;
+  --border-card: #DEDCDC;
+}
+
+body {
+  @apply font-sans;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
