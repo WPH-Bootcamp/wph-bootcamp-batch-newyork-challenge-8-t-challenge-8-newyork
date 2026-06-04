@@ -33,3 +33,4 @@ claude.json
 .cursor/
 .aider*
 .continue/
+config.bat
