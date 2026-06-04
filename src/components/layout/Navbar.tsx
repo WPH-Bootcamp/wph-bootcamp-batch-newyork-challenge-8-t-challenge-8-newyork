@@ -17,8 +17,21 @@ export const Navbar = () => {
     }
   }, [isDark]);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+    document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 h-20 z-50 bg-bg-navbar backdrop-blur-md transition-all duration-300 ${
       isOpen 
         ? 'h-screen bg-bg-main overflow-y-auto lg:h-20 lg:bg-bg-navbar lg:backdrop-blur-md lg:overflow-visible' 
         : 'bg-bg-navbar backdrop-blur-md'
@@ -110,22 +123,28 @@ export const Navbar = () => {
       </div>
 
       {/* MOBILE MENU PANEL */}
-      <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-6 pt-6 pb-12 space-y-6 bg-bg-main">
+      <div className={`lg:hidden fixed inset-x-0 top-20 bottom-0 z-40 bg-bg-main transition-all duration-300 ${isOpen ? 'block' : 'hidden'}`}>
+        <div className="px-6 pt-6 pb-12 space-y-6 h-full overflow-y-auto">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block py-1 text-md font-medium text-text-main hover:text-brand-primary transition-colors"
+              className="block py-2 text-lg font-medium text-text-main hover:text-brand-primary transition-colors"
             >
               {link.label}
             </a>
           ))}
           <div className="pt-4">
-            <Button variant="primary" size="md" className="w-full rounded-full py-3">
-              Let's Talk
-            </Button>
+            <a 
+              href="#contact"
+              onClick={() => setIsOpen(false)} 
+              className="block w-full"
+            >
+              <Button variant="primary" size="md" className="w-full rounded-full py-3">
+                Let's Talk
+              </Button>
+            </a>
           </div>
         </div>
       </div>

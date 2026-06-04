@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <section
       id='home'
-      className='relative w-full overflow-hidden py-50 bg-bg-main'
+      className='relative w-full overflow-hidden pt-32 pb-12 md:pt-40 md:pb-16 lg:pt-48 lg:pb-20 bg-bg-main'
     >
       {/* 1. KONTAINER UTAMA */}
 
@@ -42,7 +42,7 @@ export const Hero = () => {
 
         {/* 3. SISI KANAN (Kolom 2: Tempat Gambar Ilustrasi) */}
         
-        <div className='w-full max-w-md mx-auto lg:max-w-none lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:-right-16 lg:w-[52%] flex justify-center lg:justify-end animate-fade-in'>
+        <div className='w-full max-w-md mx-auto lg:max-w-none lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:-right-4 lg:w-[50%] flex justify-center lg:justify-end animate-fade-in'>
           {/* Gambar Light Mode */}
           <img
             src={heroLightImg}

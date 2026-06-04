@@ -532,3 +532,4 @@ Langkah Awal:
 Ingat: Focus on learning process, bukan hanya hasil akhir. Jangan takut membuat mistake, karena dari sanalah kita belajar. Ask questions ketika stuck, dan collaborate dengan peers untuk diskusi.
 
 "The only way to learn a new programming language is by writing programs in it."
+# company-profile

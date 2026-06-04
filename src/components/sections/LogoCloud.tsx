@@ -33,7 +33,7 @@ export const LogoCloud = () => {
         {/* Area Efek Berjalan dengan batas tepi pudar */}
         <div className="relative w-full overflow-hidden mask-gradient-edges">
           
-          {/* Track Animasi (Gabungan kelas css kustom & tailwind) */}
+          {/* Track Animasi LogoCloud */}
           <div className="animate-marquee-left space-x-16 hover:[animation-play-state:paused]">
             
             {/* KELOMPOK LOGO UTAMA */}
@@ -47,7 +47,7 @@ export const LogoCloud = () => {
               </div>
             ))}
 
-            {/* DUPLIKASI KELOMPOK LOGO (Wajib ada agar animasi menyambung tanpa putus) */}
+            {/* DUPLIKASI KELOMPOK LOGO */}
             {brandLogos.map((logo, index) => (
               <div key={`dup-${index}`} className="flex items-center justify-center w-40 h-16 shrink-0">
                 <img

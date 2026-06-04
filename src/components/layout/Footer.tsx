@@ -1,3 +1,4 @@
+
 export const Footer = () => {
   const navLinks = ["About", "Services", "Projects", "Testimonials", "FAQ"];
   

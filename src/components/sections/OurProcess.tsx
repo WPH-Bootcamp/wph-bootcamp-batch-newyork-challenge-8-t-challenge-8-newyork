@@ -39,15 +39,14 @@ export const OurProcess = () => {
                 key={index} 
                 className="relative flex flex-col lg:flex-row items-start w-full pb-8 lg:pb-12"
               >
-                {/* GARIS PENGHUBUNG DINAMIS (Hanya muncul jika bukan baris terakhir) */}
+                {/* GARIS PENGHUBUNG DINAMIS */}
                 {index < steps.length - 1 && (
-                  <div className="absolute left-6 lg:left-1/2 top-13 bottom-0 w-px -translate-x-1/2 z-0">
-                    {/* Garis Dasar (Mati/Abu-abu) */}
-                    <div className="relative max-w-6xl mx-auto py-14 bg-[#DFDFDF]"/>
-                    {/* Garis Aktif (Menyala/Orange ketika accordion di bawahnya di-klik) */}
+                  <div className="absolute left-6 lg:left-1/2 top-13 -bottom-8 w-px -translate-x-1/2 z-0">
+                    <div className="h-full bg-[#DFDFDF]"/>
+                                 
                     <div 
                       className={`absolute top-0 left-0 w-full bg-[#FF6F43] transition-all duration-500 ease-in-out ${
-                        lineActive ? 'h-[calc(100%+32px)]' : 'h-0'
+                        lineActive ? 'h-full' : 'h-0'
                       }`} 
                     />
                   </div>
@@ -71,7 +70,6 @@ export const OurProcess = () => {
                         {step.title}
                       </h3>
                       
-                      {/* SUBTITLE (Tetap tampil bersandar pada state isOpen) */}
                       <div className={`grid transition-all duration-300 ease-in-out ${
                         isOpen ? 'grid-rows-[1fr] opacity-100 mt-2' : 'grid-rows-[0fr] opacity-0'
                       }`}>
